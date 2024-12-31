@@ -27,6 +27,10 @@ def main():
                 return
         for thing in updatable:
             thing.update(dt)
+        for i in astroids:
+            if i.collision(p):
+                print("Game Over")
+                return
         screen.fill("black")
         for thingy in drawable:
             thingy.draw(screen)
