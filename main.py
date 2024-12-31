@@ -34,7 +34,7 @@ def main():
             for j in shots:
                 if j.collision(i):
                     j.kill()
-                    i.kill()
+                    i.split()
             if i.collision(p):
                 print("Game Over")
                 return
